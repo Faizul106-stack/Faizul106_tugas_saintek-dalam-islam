@@ -15,7 +15,6 @@ def hitung_faraidh():
     harta = float(input("Total harta (setelah hutang & wasiat): "))
 
     # Input ahli waris
-    suami = input_bool("Apakah ada suami?")
     istri = input_int("Jumlah istri: ")
 
     ibu = input_bool("Apakah ada ibu?")
@@ -28,15 +27,8 @@ def hitung_faraidh():
     total_bagian = 0
 
     # ======================
-    # SUAMI / ISTRI
+    # ISTRI
     # ======================
-    if suami:
-        if anak_lk + anak_pr > 0:
-            bagian['suami'] = 1/4
-        else:
-            bagian['suami'] = 1/2
-        total_bagian += bagian['suami']
-
     if istri > 0:
         if anak_lk + anak_pr > 0:
             bagian['istri'] = 1/8
